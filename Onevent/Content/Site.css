@@ -16,6 +16,22 @@ input,
 select,
 textarea {
     max-width: 280px;
+    height: 40px;
+    width: 200px;
+    text-align: left;
+    float: right;
+}
+
+.navbar-brand {
+    float: left;
+    height: 50px;
+    font-size: 18px;
+    line-height: 20px;
+}
+
+.form-control {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -26,4 +42,6 @@ textarea {
     .body-content {
         padding: 0;
     }
-}
+
+
+    }
