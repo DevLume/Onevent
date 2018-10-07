@@ -48,7 +48,7 @@
                     </button>
                     <div class="navbar-brand">
                         <a runat="server" href="~/Default">
-                            <img src="https://i.imgur.com/nbCf1gm.png" alt="Onevent"</img>
+                            <img src="https://i.imgur.com/nbCf1gm.png" alt="Onevent" height="50"</img>
                         </a>
                     </div>
                 </div>

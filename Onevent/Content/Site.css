@@ -22,16 +22,98 @@ textarea {
     float: right;
 }
 
+
 .navbar-brand {
     float: left;
     height: 50px;
+    padding: 0;
     font-size: 18px;
     line-height: 20px;
+}
+
+img {
+    max-width: 100%;
 }
 
 .form-control {
     margin-top: 0;
     margin-bottom: 0;
+}
+
+.card {
+    box-shadow: 0px 1px 5px #555;
+    background-color: white;
+    position: relative;
+}
+
+.card-title {
+    font-size: 2rem;
+    padding: .5rem;
+}
+
+.card-description {
+    padding: .5rem;
+    line-height: 1.6em;
+}
+
+.event-container {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.card-container {
+    display: grid;
+    padding: 1rem;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(4, 280px);
+}
+
+.button {
+    display: inline-block;
+    background-color: crimson;
+    padding: 5px 20px;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s ease-out;
+}
+
+.button-buy {
+    display: inline-block;
+    background-color: limegreen;
+    padding: 5px 20px;
+    float: right;
+    position: relative;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: .3s ease-out;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 0;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: auto;
+    padding: 5px;
+}
+
+.content-title-arrow {
+    background-position: 0 13px;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 4px;
+    left: 0;
+    top: 49px;
+    display: inline-block;
+    background-image: url(https://i.imgur.com/OmV3CaW.png)
+}
+
+p {
+    margin: 0 0 3px;
+    font-size: 12px;
 }
 
 /* Responsive: Portrait tablets and up */
