@@ -54,37 +54,46 @@
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="#">Festivals</a>
-                                <a class="dropdown-item bg-dark" href="#">Theatre</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item bg-dark" href="#">Something else here</a>
+                        <li><a runat="server" href="~/About">Apie</a></li>
+                        <li><a runat="server" href="~/Contact">Kontaktai</a></li>
+                        <li>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Renginiai</button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Festivaliai</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Teatrai</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Miuziklai</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Sportas</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Šeimai</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Kinas</a>
+                                </div>
                             </div>
                         </li>
                     </ul>
                     <div class="navbar-form form-group">
                         <form class="navbar-form" role="search">
                             <div class="form-group">
-                                <input class="form-control" type="search" placeholder="Search events..." aria-label="Search">
+                                <input class="form-control" type="search" placeholder="Paieška" aria-label="Search">
                             </div>
                         </form>
                     </div>
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li><a runat="server" href="~/Account/Register">Registruotis</a></li>
+                                <li><a runat="server" href="~/Account/Login">Prisijungti</a></li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: Context.User.Identity.GetUserName()  %>!</a></li>
+                                <li><a runat="server" href="~/Account/Manage" title="Tvarkyti paskyrą">Sveiki, <%: Context.User.Identity.GetUserName()  %>!</a></li>
                                 <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Atsijungti" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
                             </ul>
                         </LoggedInTemplate>
