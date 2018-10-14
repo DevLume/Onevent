@@ -56,37 +56,17 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/About">Apie</a></li>
                         <li><a runat="server" href="~/Contact">Kontaktai</a></li>
-                        <li>
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Renginiai</button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item" href="#">Festivaliai</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Teatrai</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Miuziklai</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Sportas</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Šeimai</a>
-                                    <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Kinas</a>
-                                </div>
-                            </div>
-                        </li>
+                        <li><a runat="server" href="~/EventList">Events</a></li>
                     </ul>
-                    <div class="navbar-form form-group">
-                        <form class="navbar-form" role="search">
-                            <div class="form-group">
-                                <input class="form-control" type="search" placeholder="Paieška" aria-label="Search">
-                            </div>
-                        </form>
-                    </div>
+                    
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Register">Registruotis</a></li>
                                 <li><a runat="server" href="~/Account/Login">Prisijungti</a></li>
+                                <li>
+                                    <a runat="server" href="~/ShoppingCart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                                </li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -107,6 +87,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+                <br>
                 <p>&copy; <%: DateTime.Now.Year %> - Onevent</p>
             </footer>
         </div>

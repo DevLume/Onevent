@@ -14,26 +14,25 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active">
-                    <img src="http://renginiai.kasvyksta.lt/uploads/events/53495/big/18129afc.jpg" alt="Jaunimo teatro spektaklis „AUTONOMIJA“" style="width:100%;">
+                    <img src="https://renginiai.kasvyksta.lt/uploads/events/60836/big/855083c4.jpg" alt="Lizdo Ekspedicija" style="width:100%;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5">Jaunimo teatro spektaklis „AUTONOMIJA“</h5>
+                        <h5>Lizdo Ekspedicija</h5>
                         <p>...</p>
                     </div>
-
                 </div>
 
                 <div class="item">
-                    <img src="http://renginiai.kasvyksta.lt/uploads/events/60197/big/saulius.jpg" alt="Saulius Jegelevičius „Write Down Your Dream“" style="width:100%;">
+                    <img src="https://renginiai.kasvyksta.lt/uploads/events/60836/big/855083c4.jpg" alt="Lizdo Ekspedicija" style="width:100%;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>Saulius Jegelevičius „Write Down Your Dream“</h5>
+                        <h5>Lizdo Ekspedicija</h5>
                         <p>...</p>
                     </div>
                 </div>
     
                 <div class="item">
-                    <img src="http://renginiai.kasvyksta.lt/uploads/events/20026/big/3cc5d4b8.jpg" alt="VILNIUS JAZZ 2018" style="width:100%;">
+                    <img src="https://renginiai.kasvyksta.lt/uploads/events/60836/big/855083c4.jpg" alt="Lizdo Ekspedicija" style="width:100%;">
                     <div class="carousel-caption d-none d-md-block">
-                        <h5>VILNIUS JAZZ 2018</h5>
+                        <h5>Lizdo Ekspedicija</h5>
                         <p>...</p>
                     </div>
                 </div>
@@ -51,7 +50,53 @@
         </div>
     </div>
     
-    <div id="Popular-events">
+    <div id="TitleContent" style="text-align: center">
+        <div class="col-md-12 pt-1">
+            <div class="card" style="padding: 5px 5px 20px 5px">
+            <div class="card-header">
+                <h3></h3>
+            </div>
+            <div class="card-body">
+            <div id="CategoryMenu" style="text-align: center">       
+                <h2><a href=# runat="server" style="text-decoration:none; color:black">Find Event for you!</a></h2>
+                <asp:ListView ID="categoryList"  
+                    ItemType="Onevent.Models.Category" 
+                    runat="server"
+                    SelectMethod="GetCategories" >
+                    <ItemTemplate>
+                        <b style="font-size: large; font-style: normal">
+                            <a href="/EventList.aspx?id=<%#: Item.CategoryID %>">
+                            <%#: Item.CategoryName %>
+                            </a>
+                        </b>
+                    </ItemTemplate>
+                    <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
+                </asp:ListView>
+                
+                
+                            
+                        
+            </div>
+                <div class="navbar form-inline">
+            <div class="container">
+
+                <div class="navbar-form form-group" style="width: 500px !important">
+                        <form class="navbar-form" role="search">
+                            <div class="form-group">
+                                <button type="button" class="btn btn-light"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
+                                <input class="form-control" type="search" placeholder="Search events..." aria-label="Search" style="width: 500px !important">
+                     </div>
+                            </form>
+                    </div>
+                </div>
+                </div>
+        </div>
+                
+                </div>
+                </div>
+                </div>
+    
+    <div id="Popular-events" style="padding-top: 200px">
         <div class="content-title">
             <h2><a href=# runat="server" style="text-decoration:none; color:black">Populiarūs</a></h2>
             <div class="content-title-arrow"></div>
