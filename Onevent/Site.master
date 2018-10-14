@@ -56,28 +56,18 @@
                     <ul class="nav navbar-nav">
                         <li><a runat="server" href="~/About">About</a></li>
                         <li><a runat="server" href="~/Contact">Contact</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Events</a>
-                            <div class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item bg-dark" href="#">Festivals</a>
-                                <a class="dropdown-item bg-dark" href="#">Theatre</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item bg-dark" href="#">Something else here</a>
-                            </div>
-                        </li>
+                        <li><a runat="server" href="~/EventList">Events</a></li>
                     </ul>
-                    <div class="navbar-form form-group">
-                        <form class="navbar-form" role="search">
-                            <div class="form-group">
-                                <input class="form-control" type="search" placeholder="Search events..." aria-label="Search">
-                            </div>
-                        </form>
-                    </div>
+                    
                     <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                             <ul class="nav navbar-nav navbar-right">
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
+                                <li>
+                                    <a runat="server" href="~/ShoppingCart"><span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span></a>
+                                    
+                                </li>
                             </ul>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
@@ -98,6 +88,7 @@
             </asp:ContentPlaceHolder>
             <hr />
             <footer>
+                <br>
                 <p>&copy; <%: DateTime.Now.Year %> - Onevent</p>
             </footer>
         </div>

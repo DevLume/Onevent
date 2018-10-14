@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+
 namespace Onevent.Models
 {
     public class EventContext : DbContext
@@ -7,6 +8,9 @@ namespace Onevent.Models
         {
         }
         public DbSet<Category> Categories { get; set; }
+
         public DbSet<Event> Events { get; set; }
+
+        public DbSet<CartItem> ShoppingCartItems { get; set; }
     }
 }

@@ -8,7 +8,10 @@ namespace Onevent.Models
         protected override void Seed(EventContext context)
         {
             GetCategories().ForEach(c => context.Categories.Add(c));
+            context.SaveChanges();
             GetEvents().ForEach(p => context.Events.Add(p));
+            context.SaveChanges();
+            base.Seed(context);
         }
 
         private static List<Category> GetCategories()
@@ -17,27 +20,27 @@ namespace Onevent.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Cars"
+                    CategoryName = "Concert"
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Planes"
+                    CategoryName = "Festival"
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Trucks"
+                    CategoryName = "Theater"
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "Boats"
+                    CategoryName = "Exposition"
                 },
                 new Category
                 {
                     CategoryID = 5,
-                    CategoryName = "Rockets"
+                    CategoryName = "Activity"
                 },
             };
 
@@ -50,9 +53,9 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 1,
-                    EventName = "Convertible Car",
-                    Description = "This convertible car is fast! The engine is powered by a neutrino based battery (not included)." +
-                                  "Power it up and let it go!",
+                    EventName = "Pop Concert",
+                    Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert." +
+                                  "Power it up and let's go!",
                     ImagePath="carconvert.png",
                     UnitPrice = 22.50,
                     CategoryID = 1
@@ -60,8 +63,8 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 2,
-                    EventName = "Old-time Car",
-                    Description = "There's nothing old about this toy car, except it's looks. Compatible with other old toy cars.",
+                    EventName = "Punk Concert",
+                    Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carearly.png",
                     UnitPrice = 15.95,
                      CategoryID = 1
@@ -69,8 +72,8 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 3,
-                    EventName = "Fast Car",
-                    Description = "Yes this car is fast, but it also floats in water.",
+                    EventName = "Atlernative Concert",
+                    Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carfast.png",
                     UnitPrice = 32.99,
                     CategoryID = 1
@@ -78,8 +81,8 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 4,
-                    EventName = "Super Fast Car",
-                    Description = "Use this super fast car to entertain guests. Lights and doors work!",
+                    EventName = "Chill Concert",
+                    Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carfaster.png",
                     UnitPrice = 8.95,
                     CategoryID = 1
@@ -87,9 +90,9 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 5,
-                    EventName = "Old Style Racer",
-                    Description = "This old style racer can fly (with user assistance). Gravity controls flight duration." +
-                                  "No batteries required.",
+                    EventName = "Silent Concert",
+                    Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert." +
+                                  "No friends required.",
                     ImagePath="carracer.png",
                     UnitPrice = 34.95,
                     CategoryID = 1

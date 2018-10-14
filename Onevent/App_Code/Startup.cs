@@ -11,7 +11,7 @@ namespace Onevent
             ConfigureAuth(app);
 
             // Initialize the product database.
-            Database.SetInitializer(new EventDatabaseInitializer());
+            //Database.SetInitializer(new EventDatabaseInitializer());
         }
     }
 }
