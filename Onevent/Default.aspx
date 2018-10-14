@@ -58,7 +58,7 @@
             </div>
             <div class="card-body">
             <div id="CategoryMenu" style="text-align: center">       
-                <h2><a href=# runat="server" style="text-decoration:none; color:black">Find Event for you!</a></h2>
+                <h2><a href=# runat="server" style="text-decoration:none; color:black">Kokio renginio norėsi?</a></h2>
                 <asp:ListView ID="categoryList"  
                     ItemType="Onevent.Models.Category" 
                     runat="server"
@@ -72,10 +72,7 @@
                     </ItemTemplate>
                     <ItemSeparatorTemplate>  |  </ItemSeparatorTemplate>
                 </asp:ListView>
-                
-                
-                            
-                        
+          
             </div>
                 <div class="navbar form-inline">
             <div class="container">
@@ -84,7 +81,7 @@
                         <form class="navbar-form" role="search">
                             <div class="form-group">
                                 <button type="button" class="btn btn-light"><span class="glyphicon glyphicon-calendar" aria-hidden="true"></span></button>
-                                <input class="form-control" type="search" placeholder="Search events..." aria-label="Search" style="width: 500px !important">
+                                <input class="form-control" type="search" placeholder="Ieškok renginio..." aria-label="Search" style="width: 500px !important">
                      </div>
                             </form>
                     </div>

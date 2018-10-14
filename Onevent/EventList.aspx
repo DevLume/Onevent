@@ -1,10 +1,10 @@
-﻿<%@ Page Title="Events" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="EventList.aspx.cs" Inherits="EventList" %>
+﻿<%@ Page Title="Renginiai" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="EventList.aspx.cs" Inherits="EventList" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section>
         <div>
             <hgroup>
-                <h2><%: Page.Title %> > Concerts</h2>
+                <h2><%: Page.Title %> > Koncertai</h2>
             </hgroup>
 
             <div class="col-md-12 pt-1">
@@ -56,7 +56,7 @@
                                         
                                             <a href="/AddToCart.aspx?eventID=<%#:Item.EventID %>" style="color: #ffffff">               
                                         <span class="EventListItem">
-                                            <b>Add To Cart<b>
+                                            <b>Pridėti prie krepšelio<b>
                                         </span>           
                                         </a>
                                         

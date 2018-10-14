@@ -1,11 +1,11 @@
-﻿<%@ Page Title="Event details" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="EventDetails.aspx.cs" Inherits="EventDetails" %>
+﻿<%@ Page Title="renginio detalės" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeFile="EventDetails.aspx.cs" Inherits="EventDetails" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <asp:FormView ID="eventDetail" runat="server" ItemType="Onevent.Models.Event" SelectMethod ="GetEvent" RenderOuterTable="false">
         <ItemTemplate>
             <div class="col-md-12 pt-1">
                 <hgroup>
-                <h2>Events > Concerts > <%: Page.Title %></h2>
+                <h2>Renginiai > Koncertai > <%: Page.Title %></h2>
             </hgroup>
             <div class="card" style="padding: 5px 10px 20px 10px">
             <div class="card-header">
@@ -21,21 +21,21 @@
                     </td>
                     <td>&nbsp;</td>  
                     <td style="vertical-align: top; text-align:left;">
-                        <b>Description:</b><br /><%#:Item.Description %>
+                        <b>Aprašas:</b><br /><%#:Item.Description %>
                         <br />
                         <hr>
-                        <span><b>Date:</b> 2018-10-18</span>
+                        <span><b>Data:</b> 2018-10-18</span>
                         <br />
                         <hr>
-                        <span><b>Price:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
+                        <span><b>Kaina:</b>&nbsp;<%#: String.Format("{0:c}", Item.UnitPrice) %></span>
                         <br />
                         <hr>
-                        <span><b>Event Number:</b>&nbsp;<%#:Item.EventID %></span>
+                        <span><b>Renginio kodas:</b>&nbsp;<%#:Item.EventID %></span>
                         <br />
                         <hr>
                         <a href="/AddToCart.aspx?eventID=<%#:Item.EventID %>">               
                              <span class="EventListItem">
-                                  <b>Add To Cart<b>
+                                  <b>Pridėti prie krepšelio<b>
                              </span>           
                         </a>
 
@@ -55,7 +55,7 @@
     <br /><br /><br />
     <div id="Popular-events" style="padding-top: 400px">
         <div class="content-title">
-            <h2><a href=# runat="server" style="text-decoration:none; color:black">Recommended</a></h2>
+            <h2><a href=# runat="server" style="text-decoration:none; color:black">Rekomenduojama</a></h2>
             <div class="content-title-arrow"></div>
         </div>
         <div class="card-container">
@@ -66,92 +66,92 @@
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images1.tiketa.lt/Files/2018.09/id_59873_294x324.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>Šviesos festivalis „DIDIEJI KINIJOS ŽIBINTAI“ Vilniuje</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images4.tiketa.lt/Files/2018.10/id_59989.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>Žaidimų ir jaunimo kultūros paroda/ekspozicija GAMEON</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images3.tiketa.lt/Files/2018.08/id_58726_294x324.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>Festivalis "DVIGUBA VAIVORYKŠTĖ IR TORNADAS"</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images2.tiketa.lt/Files/2018.10/id_60074_294x324.png">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>Ekskursija - degustacija Volfas Engelman Studijoje</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images4.tiketa.lt/Files/2018.08/id_58308_294x324.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>DAKHA BRAKHA (Ukraina) Vilniaus kongresų rūmuose</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images2.tiketa.lt/Files/2018.08/id_58624_294x324.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>A.Smilgevičiūtė ir SKYLĖ. Mitologinė drama DŪŠELĖS</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>
             <article class="card">
-                <img src="http://images1.tiketa.lt/Files/2018.02/id_53463_294x324.jpg">
+                <img src="http://images1.tiketa.lt/Files/2018.09/id_59433_294x324.jpg">
                 <div class="text-block"> 
-                    <h5>RASTRELLI CELLO QUARTETT-From Brahms till Beatles</h5>
+                    <h5>Trimito žvaigždė MANUEL BLANCO (Ispanija) ir LVSO</h5>
                     <p>Data</p>
                     <p>Kaina</p>
                     <div class="form-inline">
-                        <a href="#" class="button">Book</a>
-                        <a href="#" class="button-buy">Buy</a>
+                        <a href="#" class="button">Rezervuoti</a>
+                        <a href="#" class="button-buy">Pirkti</a>
                     </div>
                 </div>
         </article>

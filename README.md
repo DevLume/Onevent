@@ -11,7 +11,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 Things you need to get the project on your system:
 * any Git GUI (like Git Bash, SourceTree, etc.)
-* Microsoft Visual Studio
+* Microsoft® Visual Studio® 2017
+* Microsoft® SQL Server® 2012 Express
 
 ### Installing
 

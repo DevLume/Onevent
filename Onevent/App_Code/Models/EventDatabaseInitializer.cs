@@ -20,27 +20,27 @@ namespace Onevent.Models
                 new Category
                 {
                     CategoryID = 1,
-                    CategoryName = "Concert"
+                    CategoryName = "Koncertas"
                 },
                 new Category
                 {
                     CategoryID = 2,
-                    CategoryName = "Festival"
+                    CategoryName = "Festivslis"
                 },
                 new Category
                 {
                     CategoryID = 3,
-                    CategoryName = "Theater"
+                    CategoryName = "Teatras"
                 },
                 new Category
                 {
                     CategoryID = 4,
-                    CategoryName = "Exposition"
+                    CategoryName = "Paroda"
                 },
                 new Category
                 {
                     CategoryID = 5,
-                    CategoryName = "Activity"
+                    CategoryName = "Aktyvi veikla"
                 },
             };
 
@@ -53,7 +53,7 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 1,
-                    EventName = "Pop Concert",
+                    EventName = "Pop koncertas",
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert." +
                                   "Power it up and let's go!",
                     ImagePath="carconvert.png",
@@ -63,7 +63,7 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 2,
-                    EventName = "Punk Concert",
+                    EventName = "Kitas koncertas",
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carearly.png",
                     UnitPrice = 15.95,
@@ -72,7 +72,7 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 3,
-                    EventName = "Atlernative Concert",
+                    EventName = "Alternatyvus koncertas",
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carfast.png",
                     UnitPrice = 32.99,
@@ -81,7 +81,7 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 4,
-                    EventName = "Chill Concert",
+                    EventName = "Koncertas Bam bam",
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert.",
                     ImagePath="carfaster.png",
                     UnitPrice = 8.95,
@@ -90,7 +90,7 @@ namespace Onevent.Models
                 new Event
                 {
                     EventID = 5,
-                    EventName = "Silent Concert",
+                    EventName = "Tylos koncertas",
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert." +
                                   "No friends required.",
                     ImagePath="carracer.png",
