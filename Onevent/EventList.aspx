@@ -52,13 +52,13 @@
                                         
                                         <p>2018-10-18</p>
                                         
-                                        <p><b>Price: </b><%#:String.Format("{0:c}", Item.UnitPrice)%></p>
+                                        <p><b>Kaina: </b><%#:String.Format("{0:c}", Item.UnitPrice)%></p>
                                         
-                                            <a href="/AddToCart.aspx?eventID=<%#:Item.EventID %>" style="color: #ffffff">               
-                                        <span class="EventListItem">
-                                            <b>Pridėti prie krepšelio<b>
-                                        </span>           
-                                        </a>
+                                        <div class="form-inline">
+                                            <a href="#" class="button">Rezervuoti</a>
+                                            <a href="/AddToCart.aspx?eventID=<%#:Item.EventID %>" class="button-buy">Pirkti</a>
+                                        </div>
+                                        
                                         
                                         </div>
                                             </div>

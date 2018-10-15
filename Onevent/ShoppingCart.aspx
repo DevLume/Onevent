@@ -30,7 +30,10 @@
         <p></p>
         <strong>
             <asp:Label ID="LabelTotalText" runat="server" Text="Viso: "></asp:Label>
-            <asp:Label ID="lblTotal" runat="server" EnableViewState="false"></asp:Label>
+            <asp:Label ID="lblTotal" runat="server" EnableViewState="false">€90.00</asp:Label>
+            <br />
+            <br />
+            <button type="button" class="btn btn-primary">Mokėti</button>
         </strong> 
     </div>
     <br />
