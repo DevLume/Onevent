@@ -9,43 +9,42 @@
             <form>
                 <li class ="registrationFormItem">
                     <h3>Pavadinimas:</h3>
-                    <input type="text" />
+                    <asp:TextBox runat="server" ID="nameInput" type="text" />
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Kategorija:</h3>
-                     <select>
-                      <option value="Nepasirinkta kategorija" selected="selected"> Nepasirinkta kategorija</option>
-                      <option value="Teatras">Teatras</option>
-                      <option value="Koncertas">Koncertas</option>
-                      <option value="Festivalis">Festivalis</option>
-                      <option value="Aktyvi veikla">Aktyvi veikla</option>
-                      <option value="Paroda">Paroda</option>
-                    </select> 
+                     <asp:DropDownList runat="server" ID="categoryInput">
+                      <asp:ListItem value="Nepasirinkta kategorija"/>
+                      <asp:ListItem value="Teatras"/>
+                      <asp:ListItem value="Koncertas"/>
+                      <asp:ListItem value="Festivalis"/>
+                      <asp:ListItem value="Aktyvi veikla"/>
+                      <asp:ListItem value="Paroda"/>
+                    </asp:DropDownList> 
                 </li>
                 <li class ="registrationFormItem">
-                    <h3>Aprašas:</h3>
-                    <input type="text" />
+                    <h3>Aprašas:</h3>                  
+                    <asp:TextBox ID="descriptionInput" runat="server" type="text" />
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Renginio vieta:</h3>
-                    <input type="text" />
+                    <asp:TextBox ID="addressInput" runat="server" type="text" />
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Organizatoriaus el. paštas:</h3>
-                    <input type="text" />
+                    <asp:TextBox ID="organizatorInput" runat="server" type="text" />
                 </li>
                  <li class ="registrationFormItem">
                     <h3>Bilietų skaičius:</h3>
-                     <input type="text" />
+                     <asp:TextBox runat="server" ID="TicketCountInput" type="text" />
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Bilietų kaina:</h3>
-                    <input type="text" />
+                    <asp:TextBox runat="server" ID="ticketPriceInput" type="text" />
                 </li>
-            <li class ="registrationFormItem"><button class ="submitButton" onclick="Submit">Registruoti renginį</button></li> 
+            <li class ="registrationFormItem"><asp:Button OnClick="Submit" ID="submitButton" class ="submitButton" runat="server" Text="Registruoti renginį"></asp:Button></li> 
             </form>
-        </ul>
-    
+        </ul> 
  </div>
 </ul>
 </form> 

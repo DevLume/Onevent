@@ -4,7 +4,7 @@ using Onevent.Models;
 namespace Onevent.Models
 {
     public class Event
-    {
+    {       
         [ScaffoldColumn(false)]
         public int EventID { get; set; }
 

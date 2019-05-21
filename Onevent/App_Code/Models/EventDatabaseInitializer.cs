@@ -5,6 +5,9 @@ namespace Onevent.Models
 {
     public class EventDatabaseInitializer : DropCreateDatabaseIfModelChanges<EventContext>
     {
+        private static List<Category> categories;
+        private static List<Event> events;
+
         protected override void Seed(EventContext context)
         {
             GetCategories().ForEach(c => context.Categories.Add(c));
@@ -14,9 +17,14 @@ namespace Onevent.Models
             base.Seed(context);
         }
 
-        public static List<Category> GetCategories()
+        public static void InsertEvent(Event e)
         {
-            var categories = new List<Category> {
+            //TODO:Make Event insertion
+        }
+
+        private static void GetInitialCategoryList()
+        {
+            categories = new List<Category> {
                 new Category
                 {
                     CategoryID = 1,
@@ -43,13 +51,11 @@ namespace Onevent.Models
                     CategoryName = "Aktyvi veikla"
                 },
             };
-
-            return categories;
         }
 
-        public static List<Event> GetEvents()
+        private void SetInitialEventList()
         {
-            var events = new List<Event> {
+            events = new List<Event> {
                 new Event
                 {
                     EventID = 1,
@@ -79,7 +85,15 @@ namespace Onevent.Models
                },
 
             };
+        }
 
+        public static List<Category> GetCategories()
+        {
+            return categories;
+        }
+
+        public static List<Event> GetEvents()
+        {
             return events;
         }
     }
