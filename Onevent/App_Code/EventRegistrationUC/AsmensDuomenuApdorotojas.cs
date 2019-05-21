@@ -15,9 +15,27 @@ public class AsmensDuomenuApdorotojas
         //
     }
 
-
-    public bool CheckIfUserRegistered(Naudotojas n)
+    public bool CheckIfOrganizatorExists(string orgEmail)
     {
+        var x = UserDatabaseInitializer.GetOrganizators().Where(c => c.Email == orgEmail);
+
+        if (x.Count() == 0)
+        {
+            return false;
+        }
+
+        return true;
+    }
+
+    public bool CheckIfUserRegistered(string userEmail)
+    {
+        var x = UserDatabaseInitializer.GetUsers().Where(c => c.Email == userEmail);
+
+        if (x.Count() == 0)
+        {
+            return false;
+        }
+
         return false;
     }
 }

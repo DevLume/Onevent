@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -8,10 +9,7 @@ using System.Web;
 /// </summary>
 public class Organizatorius
 {
-    public Organizatorius()
-    {
-        //
-        // TODO: Add constructor logic here
-        //
-    }
+    [Required, StringLength(256), Display(Name = "Email")]
+    public string Email { get; set; }
+    public int OrganizatorID { get; set; }
 }

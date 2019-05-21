@@ -14,7 +14,7 @@ namespace Onevent.Models
             base.Seed(context);
         }
 
-        private static List<Category> GetCategories()
+        public static List<Category> GetCategories()
         {
             var categories = new List<Category> {
                 new Category
@@ -47,7 +47,7 @@ namespace Onevent.Models
             return categories;
         }
 
-        private static List<Event> GetEvents()
+        public static List<Event> GetEvents()
         {
             var events = new List<Event> {
                 new Event
