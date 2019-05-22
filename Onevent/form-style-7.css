@@ -11,6 +11,10 @@ html{
     padding: 20px;
     font-family: Georgia, "Times New Roman", Times, serif;
 }
+.descriptionText{
+    height: 80px !important;
+    width: 280px !important;
+}
 .registrationForm{
     margin-top: 20px;
     width: inherit;
@@ -42,6 +46,7 @@ html{
 }
 .registrationFormItem h3 {
     font-size: 18px;
+    align-self:flex-start;
     text-align: right;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -51,9 +56,16 @@ html{
 .submitButton {
     width: 280px;
     padding: 10px;
-    align-self:flex-end;
+    height: 40px !important; 
+    align-self: flex-end;
     margin-left: 25%;
-    margin-right:10px;
+    margin-right: 10px;
+    font-weight: bold;
+    background-color: #212121;
+    border: none;
+    color: #F5AE2B;
+    text-align: center;
+    vertical-align: middle;
 }
 .registrationFormItem input, .registrationForm select{
     height: 28px;

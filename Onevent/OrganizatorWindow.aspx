@@ -24,7 +24,7 @@
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Aprašas:</h3>                  
-                    <asp:TextBox ID="descriptionInput" runat="server" type="text" />
+                    <asp:TextBox ID="descriptionInput" TextMode="MultiLine" class="descriptionText" runat="server" type="text" />
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Renginio vieta:</h3>
