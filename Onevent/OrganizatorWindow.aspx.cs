@@ -37,8 +37,10 @@ public partial class OrganizatorWindow : Page
                 Address = addressInput.Text,
                 OrganizatorEmail = organizatorInput.Text,
                 Approved = true,
-                UnitPrice = int.Parse(ticketPriceInput.Text),
+                UnitPrice = double.Parse(ticketPriceInput.Text),
                 TicketCount = int.Parse(TicketCountInput.Text),
+                
+                //ignorinam kategorijas          
                 Category = new Category
                 {
                     CategoryID = 1,
@@ -46,10 +48,11 @@ public partial class OrganizatorWindow : Page
                 }
             };
         }
-        catch (FormatException)
+        catch (FormatException ex)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Nepalikite tuščių langų')", true);
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('"+ex.ToString()+"')", true);
         }
+
         if (ev != null)
         {
             Tuple<bool, string> checkRes = rt.CheckEventData(ev);
