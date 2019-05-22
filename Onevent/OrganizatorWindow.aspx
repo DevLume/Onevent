@@ -40,7 +40,7 @@
                 </li>
                 <li class ="registrationFormItem">
                     <h3>Bilietų kaina:</h3>
-                    <asp:TextBox runat="server" ID="ticketPriceInput" type="text" />
+                    <asp:TextBox runat="server" ID="ticketPriceInput" type="text" OnBlur ="priceChange()" />
                 </li>
             <li class ="registrationFormItem"><asp:Button OnClick="Submit" ID="submitButton" class ="submitButton" runat="server" Text="Registruoti renginį"></asp:Button></li> 
             </form>
@@ -312,5 +312,6 @@
         </article>
         </div>
     </div>
-    
+        <script src="Scripts/submitButton.js"></script>
+
 </asp:Content>
