@@ -6,11 +6,10 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Onevent;
 
 public partial class OrganizatorWindow : Page
 {
-    public string description = "KEK THAT's ALL?";
-
     public IQueryable<Event> Events;
     public EventContext eventDataContext;
 

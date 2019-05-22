@@ -61,10 +61,11 @@ namespace Onevent
                 resultState = false;
                 resultMessage = "No Event name was given";
             }
-
-            AsmensDuomenuApdorotojas ada = new AsmensDuomenuApdorotojas();
-            resultState = ada.CheckIfOrganizatorExists(eventToCheck.OrganizatorEmail);
-
+            else
+            {
+                resultState = true;
+            }                  
+            
             if (resultState == false)
             {
                 resultMessage = "Such organizator does not exist";

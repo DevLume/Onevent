@@ -7,47 +7,51 @@ using System.Web;
 /// <summary>
 /// Summary description for UserDatabaseInitializer
 /// </summary>
-public class UserDatabaseInitializer : DropCreateDatabaseIfModelChanges<UserContext>
+/// 
+namespace Onevent.Models
 {
-    private static List<Naudotojas> Users;
-    private static List<Organizatorius> Organizators;
-    protected override void Seed(UserContext context)
+    public class UserDatabaseInitializer : DropCreateDatabaseIfModelChanges<UserContext>
     {
-        GetUsers().ForEach(c => context.Users.Add(c));
-        context.SaveChanges();
-        GetOrganizators().ForEach(c => context.Organizators.Add(c));
-        context.SaveChanges();
-        base.Seed(context);
-    }
-
-  
-
-    public static List<Naudotojas> GetUsers()
-    {
-      /*  var Users = new List<Naudotojas>
+        private static List<Naudotojas> Users;
+        private static List<Organizatorius> Organizators;
+        protected override void Seed(UserContext context)
         {
-            new Naudotojas
-            {
-                UserID = 1,
-                Username = "Karolis",
-                Email = "TestEmail@mail.com"
-            }
-        };
-        */
-        return Users;
-    }
+            GetUsers().ForEach(c => context.Users.Add(c));
+            context.SaveChanges();
+            GetOrganizators().ForEach(c => context.Organizators.Add(c));
+            context.SaveChanges();
+            base.Seed(context);
+        }
 
-    public static List<Organizatorius> GetOrganizators()
-    {
-        /*var Organizators = new List<Organizatorius>
+
+
+        public static List<Naudotojas> GetUsers()
         {
-            new Organizatorius
-            {
-                OrganizatorID = 1,
-                Email = "TestEmail@mail.com"
-            }
-        };*/
+            /*  var Users = new List<Naudotojas>
+              {
+                  new Naudotojas
+                  {
+                      UserID = 1,
+                      Username = "Karolis",
+                      Email = "TestEmail@mail.com"
+                  }
+              };
+              */
+            return Users;
+        }
 
-        return Organizators;
+        public static List<Organizatorius> GetOrganizators()
+        {
+            /*var Organizators = new List<Organizatorius>
+            {
+                new Organizatorius
+                {
+                    OrganizatorID = 1,
+                    Email = "TestEmail@mail.com"
+                }
+            };*/
+
+            return Organizators;
+        }
     }
 }
