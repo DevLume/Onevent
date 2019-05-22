@@ -3,6 +3,9 @@ html{
     height: 100%;
     width: 100%;
 }
+ul{
+    padding: 0;
+}
 .form-style-7 {
     max-width: 400px;
     margin: 50px auto;
@@ -58,7 +61,7 @@ html{
     padding: 10px;
     height: 40px !important; 
     align-self: flex-end;
-    margin-left: 25%;
+    margin-left: 290.8px;
     margin-right: 10px;
     font-weight: bold;
     background-color: #212121;
@@ -173,4 +176,40 @@ html{
         color: #fff;
     }
 
+.container1{
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.tableHeader th{
+    color: #F5AE2B;
+    background-color: black;
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: black;
+    border-bottom: solid 1px #C0C0C0;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {  
+    background-color: #55608f;
+}
+
+
+td {
+    position: relative;
+
+}
 </style >
