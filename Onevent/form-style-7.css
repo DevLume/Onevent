@@ -173,4 +173,40 @@ html{
         color: #fff;
     }
 
+.container1{
+
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+.tableHeader th{
+    color: #F5AE2B;
+    background-color: black;
+}
+
+th,
+td {
+    padding: 15px;
+    background-color: rgba(255,255,255,0.2);
+    color: black;
+    border-bottom: solid 1px #C0C0C0;
+}
+
+th {
+    text-align: left;
+}
+
+thead th {  
+    background-color: #55608f;
+}
+
+
+td {
+    position: relative;
+
+}
 </style >
