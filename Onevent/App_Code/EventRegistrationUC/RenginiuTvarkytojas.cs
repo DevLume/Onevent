@@ -18,11 +18,21 @@ public class RenginiuTvarkytojas
         //
     }
     
-    public bool AddEvent(Event e)
+    public bool AddEvent(Event e, EventContext eventContext)
     {
         //for demo purposes all events will always be approved
         e.Approved = true;
-        return false;
+        e.CategoryID = 2;
+        e.ImagePath = "carconvert.png";
+        //List<Event> events = EventDatabaseInitializer.GetEvents();
+
+        //events.Add(e);
+
+        eventContext.Events.Add(e);
+
+
+        eventContext.SaveChanges();
+        return true;
     }
 
     public bool RemoveEvent(int eventID)

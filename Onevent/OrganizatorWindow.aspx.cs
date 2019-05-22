@@ -10,9 +10,14 @@ using System.Web.UI.WebControls;
 public partial class OrganizatorWindow : Page
 {
     public string description = "KEK THAT's ALL?";
+
+    public IQueryable<Event> Events;
+    public EventContext eventDataContext;
+
     protected void Page_Load(object sender, EventArgs e)
     {
-     
+        eventDataContext = new EventContext();
+        Events = eventDataContext.Events;
     }
 
     public void Submit(object sender, EventArgs e)
@@ -36,8 +41,19 @@ public partial class OrganizatorWindow : Page
             }
         };
 
-        Tuple<bool, string> a = rt.CheckEventData(ev);
-        Console.Write("noop");
+        Tuple<bool, string> checkRes = rt.CheckEventData(ev);
+        if (checkRes.Item1)
+        {
+            bool addRes = rt.AddEvent(ev, eventDataContext);
+            if (addRes == false)
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Something ducked up with insertion bro')", true);
+            }
+        }
+        else
+        {
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Something ducked up bro')", true);
+        }
     }
 
 }

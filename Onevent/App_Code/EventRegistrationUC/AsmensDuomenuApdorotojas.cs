@@ -8,11 +8,10 @@ using System.Web;
 /// </summary>
 public class AsmensDuomenuApdorotojas
 {
+    private UserContext userDataContext;
     public AsmensDuomenuApdorotojas()
     {
-        //
-        // TODO: Add constructor logic here
-        //
+        userDataContext = new UserContext();      
     }
 
     public bool CheckIfOrganizatorExists(string orgEmail)

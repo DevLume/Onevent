@@ -22,7 +22,7 @@ namespace Onevent.Models
             //TODO:Make Event insertion
         }
 
-        private static void GetInitialCategoryList()
+        private static void SetInitialCategoryList()
         {
             categories = new List<Category> {
                 new Category

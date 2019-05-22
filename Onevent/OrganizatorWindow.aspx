@@ -48,6 +48,61 @@
  </div>
 </ul>
 </form> 
+   
+        <table>
+            <tr>
+                <th></th>
+                <th>
+                    ID
+                </th>
+                <th>
+                    Pavadinimas
+                </th>
+                <th>
+                    Bilietu skaicius
+                </th>
+                <th>
+                    Bilieto kaina
+                </th>
+                <th>
+                    Organizatoriaus vardas
+                </th>
+                <th>
+                    Organizatoriaus Email
+                </th>
+                <th>
+                    Renginio aprasas
+                </th>
+            </tr>
+            <%foreach (var item in Events)
+            {%>
+                <tr>
+                    <th></th>
+                    <th>
+                        <%= item.EventID %>
+                    </th>
+                    <th>
+                        <%= item.EventName %>
+                    </th>
+                    <th>
+                        <%= item.TicketCount %>
+                    </th>
+                    <th>
+                        <%= item.UnitPrice %>
+                    </th>
+                    <th>
+                        <%= item.OrganizatorEmail %>
+                    </th>
+                    <th>
+                        <%= item.OrganizatorEmail %>
+                    </th>
+                    <th>
+                        <%= item.Description %>
+                    </th>
+                </tr>
+            <%} %>
+        </table>
+
         <div id="organizatorEvents" style="padding-top: 100px">
         <div class="content-title">
             <h2><a href=# runat="server" style="text-decoration:none; color:black">Jūsų sukurti renginiai</a></h2>
