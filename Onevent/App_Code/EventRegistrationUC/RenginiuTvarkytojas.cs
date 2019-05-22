@@ -21,8 +21,7 @@ public class RenginiuTvarkytojas
     public bool AddEvent(Event e, EventContext eventContext)
     {
         //for demo purposes all events will always be approved
-        e.Approved = true;
-        e.CategoryID = 2;
+        e.Approved = true;       
         e.ImagePath = "carconvert.png";
         //List<Event> events = EventDatabaseInitializer.GetEvents();
 

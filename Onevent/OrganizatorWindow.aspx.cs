@@ -14,45 +14,61 @@ public partial class OrganizatorWindow : Page
     public IQueryable<Event> Events;
     public EventContext eventDataContext;
 
+    protected AsmensDuomenuApdorotojas ada;
+
     protected void Page_Load(object sender, EventArgs e)
     {
         eventDataContext = new EventContext();
         Events = eventDataContext.Events;
+        ada = new AsmensDuomenuApdorotojas();
     }
 
     public void Submit(object sender, EventArgs e)
     {
         RenginiuTvarkytojas rt = new RenginiuTvarkytojas();
-
-        Event ev = new Event
+        Event ev = null;
+        try
         {
-            EventID = 6,
-            EventName = nameInput.Text,
-            Description = descriptionInput.Text,
-            Address = addressInput.Text,
-            OrganizatorEmail = organizatorInput.Text,
-            Approved = true,
-            UnitPrice = int.Parse(ticketPriceInput.Text),
-            TicketCount = int.Parse(TicketCountInput.Text),
-            Category = new Category
+            ev = new Event
             {
-                CategoryID = 1,
-                CategoryName = "Koncertas",
-            }
-        };
-
-        Tuple<bool, string> checkRes = rt.CheckEventData(ev);
-        if (checkRes.Item1)
-        {
-            bool addRes = rt.AddEvent(ev, eventDataContext);
-            if (addRes == false)
-            {
-                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Something ducked up with insertion bro')", true);
-            }
+                EventID = 6,
+                EventName = nameInput.Text,
+                Description = descriptionInput.Text,
+                Address = addressInput.Text,
+                OrganizatorEmail = organizatorInput.Text,
+                Approved = true,
+                UnitPrice = int.Parse(ticketPriceInput.Text),
+                TicketCount = int.Parse(TicketCountInput.Text),
+                Category = new Category
+                {
+                    CategoryID = 1,
+                    CategoryName = "Koncertas",
+                }
+            };
         }
-        else
+        catch (FormatException)
         {
-            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Something ducked up bro')", true);
+            ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Nepalikite tuščių langų')", true);
+        }
+        if (ev != null)
+        {
+            Tuple<bool, string> checkRes = rt.CheckEventData(ev);
+            if (checkRes.Item1)
+            {
+                bool addRes = rt.AddEvent(ev, eventDataContext);
+                if (addRes == false)
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Įvyko klaida įvedant renginio duomenis, bandykite dar kartą')", true);
+                }
+                else
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Renginys sėkmingai įvestas į duomenų bazę')", true);
+                }
+            }
+            else
+            {
+                ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('Blogai suvesti renginio duomenys, patikrinkite, ar ivestas teisingas el.paštas')", true);
+            }
         }
     }
 

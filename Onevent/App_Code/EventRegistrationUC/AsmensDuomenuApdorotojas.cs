@@ -16,7 +16,7 @@ public class AsmensDuomenuApdorotojas
 
     public bool CheckIfOrganizatorExists(string orgEmail)
     {
-        var x = UserDatabaseInitializer.GetOrganizators().Where(c => c.Email == orgEmail);
+        var x = userDataContext.Organizators.Where(c => c.Email == orgEmail);
 
         if (x.Count() == 0)
         {
@@ -28,7 +28,7 @@ public class AsmensDuomenuApdorotojas
 
     public bool CheckIfUserRegistered(string userEmail)
     {
-        var x = UserDatabaseInitializer.GetUsers().Where(c => c.Email == userEmail);
+        var x = userDataContext.Users.Where(c => c.Email == userEmail);
 
         if (x.Count() == 0)
         {
@@ -37,4 +37,15 @@ public class AsmensDuomenuApdorotojas
 
         return false;
     }
+
+    public Naudotojas GetUser(string email)
+    {
+        var user = userDataContext.Users.Where(c => c.Email == email);
+
+        var x = user.ToList();
+
+
+        return x.ElementAt(0);
+    }
+
 }

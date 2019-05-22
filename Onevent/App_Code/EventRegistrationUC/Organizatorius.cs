@@ -11,5 +11,6 @@ public class Organizatorius
 {
     [Required, StringLength(256), Display(Name = "Email")]
     public string Email { get; set; }
+    [Key]
     public int OrganizatorID { get; set; }
 }

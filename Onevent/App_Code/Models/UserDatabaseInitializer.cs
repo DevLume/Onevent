@@ -9,6 +9,8 @@ using System.Web;
 /// </summary>
 public class UserDatabaseInitializer : DropCreateDatabaseIfModelChanges<UserContext>
 {
+    private static List<Naudotojas> Users;
+    private static List<Organizatorius> Organizators;
     protected override void Seed(UserContext context)
     {
         GetUsers().ForEach(c => context.Users.Add(c));
@@ -18,9 +20,11 @@ public class UserDatabaseInitializer : DropCreateDatabaseIfModelChanges<UserCont
         base.Seed(context);
     }
 
+  
+
     public static List<Naudotojas> GetUsers()
     {
-        var Users = new List<Naudotojas>
+      /*  var Users = new List<Naudotojas>
         {
             new Naudotojas
             {
@@ -29,20 +33,20 @@ public class UserDatabaseInitializer : DropCreateDatabaseIfModelChanges<UserCont
                 Email = "TestEmail@mail.com"
             }
         };
-
+        */
         return Users;
     }
 
     public static List<Organizatorius> GetOrganizators()
     {
-        var Organizators = new List<Organizatorius>
+        /*var Organizators = new List<Organizatorius>
         {
             new Organizatorius
             {
                 OrganizatorID = 1,
                 Email = "TestEmail@mail.com"
             }
-        };
+        };*/
 
         return Organizators;
     }

@@ -55,7 +55,7 @@ namespace Onevent.Models
 
         private void SetInitialEventList()
         {
-            events = new List<Event> {
+           events = new List<Event> {
                 new Event
                 {
                     EventID = 1,
@@ -63,27 +63,14 @@ namespace Onevent.Models
                     Description = "This is a nice Concert. It is a very nice Concert. Everyone would love this Concert. It's a great great Concert." +
                                   "Power it up and let's go!",
                     Address = "Didlaukio g. 47",
-                    OrganizatorEmail = "org@mail.com",
+                    OrganizatorEmail = "UserOrg@mail.com",
                     Approved = true,
                     TicketCount = 1000,
                     ImagePath="carconvert.png",
                     UnitPrice = 22.50,
                     CategoryID = 1
                },
-                new Event
-                {
-                    EventID = 2,
-                    EventName = "Paroda",
-                    Description = "super paroda",
-                    Address = "Parko g. 25",
-                    OrganizatorEmail = "paroduOrg@mail.com",
-                    Approved = true,
-                    TicketCount = 0,
-                    ImagePath="carconvert.png",
-                    UnitPrice = 22.50,
-                    CategoryID = 4
-               },
-
+              
             };
         }
 

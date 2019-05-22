@@ -9,6 +9,7 @@ using System.Web;
 /// </summary>
 public class Naudotojas
 {
+    [Key]
     public int UserID { get; set; }
     [Required, StringLength(100), Display(Name = "Username")]
     public string Username { get; set; }

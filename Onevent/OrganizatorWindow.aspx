@@ -91,7 +91,7 @@
                         <%= item.UnitPrice %>
                     </th>
                     <th>
-                        <%= item.OrganizatorEmail %>
+                        <%= ada.GetUser(item.OrganizatorEmail).Username %>
                     </th>
                     <th>
                         <%= item.OrganizatorEmail %>
